@@ -1,0 +1,33 @@
+
+{
+  "title": "SMS Interrupções de Água",
+  "config": {
+    "step": {
+      "user": {
+        "title": "SMS Interrupções de Água",
+        "description": "Acompanhe interrupções de fornecimento de água dos SMS. Indique o URL oficial ou o caminho para um ficheiro HTML local que contenha a variável `locations`.",
+        "data": {
+          "name": "Nome",
+          "source": "Fonte (URL ou caminho de ficheiro local)",
+          "scan_minutes": "Intervalo de atualização (minutos)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Esta fonte já está configurada."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "SMS Interrupções — Opções",
+        "description": "Altere o nome, a fonte ou o intervalo de atualização.",
+        "data": {
+          "name": "Nome",
+          "source": "Fonte (URL ou caminho de ficheiro local)",
+          "scan_minutes": "Intervalo de atualização (minutos)"
+        }
+      }
+    }
+  }
+}
