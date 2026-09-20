@@ -2,11 +2,11 @@
   "domain": "sms_interrupcoes",
   "name": "SMS Interrupções Água",
   "version": "0.0.1",
-  "documentation": "https://sms-setubal.pt/cliente/avisos-interrupcao-fornecimento/",
+  "documentation": "https://github.com/GuiBGP/sms-interrupcoes-ha",
   "requirements": [],
   "codeowners": ["@guibgp"],
   "integration_type": "hub",
   "iot_class": "cloud_polling",
   "config_flow": true,
-  "loggers": ["custom_components.sms_interrupcoes"]
+  "issue_tracker": "https://github.com/GuiBGP/sms-interrupcoes-ha"
 }
