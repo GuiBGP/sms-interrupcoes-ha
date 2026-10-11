@@ -1,5 +1,5 @@
 {
-  "name": "SMS-INTERRUPCOES",
-  "homeassistant": "2026.12.0",
+  "name": "SMS Interrupções",
+  "homeassistant": "2026.10.0",
   "render_readme": true
 }
