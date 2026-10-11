@@ -40,6 +40,7 @@ PLATFORM_SCHEMA = vol.Schema(
         vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
         vol.Optional(CONF_SOURCE, default=DEFAULT_URL): cv.string,
         vol.Optional(CONF_SCAN_INTERVAL, default=DEFAULT_SCAN_INTERVAL): cv.positive_int,
+        vol.Optional(CONF_RADIUS, default=DEFAULT_RADIUS): cv.positive_int,
     }
 )
 
