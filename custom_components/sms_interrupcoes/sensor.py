@@ -132,15 +132,15 @@ async def async_setup_entry(
 
 
 class SmsInterrupcoesSensor(CoordinatorEntity, SensorEntity):
-    """Sensor entity showing the count of interruptions."""
+    """Sensor entity for water outages."""
 
     _attr_icon = "mdi:water-off"
 
-    def __init__(self, coordinator: DataUpdateCoordinator, name: str, unique_suffix: str) -> None:
-        """Initialize the sensor."""
+    def __init__(self, coordinator: DataUpdateCoordinator, name: str, source: str) -> None:
         super().__init__(coordinator)
         self._attr_name = name
-        self._attr_unique_id = f"{DOMAIN}_{unique_suffix}"
+        # Exactly matches your original unique_id format:
+        self._attr_unique_id = f"sms_interrupcoes::{source}"
 
     @property
     def native_value(self) -> int:
