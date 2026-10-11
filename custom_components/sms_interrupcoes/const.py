@@ -8,7 +8,7 @@ DOMAIN = "sms_interrupcoes"
 DEFAULT_NAME = "SMS Interrupções Água"
 DEFAULT_URL = "https://sms-setubal.pt/cliente/avisos-interrupcao-fornecimento/"
 DEFAULT_SCAN_INTERVAL = 30
-DEFAULT_RADIUS = 10000  # 0 means disabled (track all events)
+DEFAULT_RADIUS = 0  # 0 means disabled (track all events)
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
