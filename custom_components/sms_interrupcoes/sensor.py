@@ -116,11 +116,9 @@ async def async_setup_entry(
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    """Set up platform from a ConfigEntry."""
     cfg = {**entry.data, **entry.options}
     name = cfg.get(CONF_NAME, DEFAULT_NAME)
     source = cfg.get(CONF_SOURCE, DEFAULT_URL)
-
     raw_interval = cfg.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL)
     scan_interval = (
         raw_interval if isinstance(raw_interval, timedelta) else timedelta(minutes=int(raw_interval))
@@ -128,7 +126,8 @@ async def async_setup_entry(
 
     coordinator = await _create_coordinator(hass, source, scan_interval)
     await coordinator.async_config_entry_first_refresh()
-    async_add_entities([SmsInterrupcoesSensor(coordinator, name, entry.entry_id)])
+    # Pass 'source' so the unique_id matches the one in HA registry
+    async_add_entities([SmsInterrupcoesSensor(coordinator, name, source)])
 
 
 class SmsInterrupcoesSensor(CoordinatorEntity, SensorEntity):
