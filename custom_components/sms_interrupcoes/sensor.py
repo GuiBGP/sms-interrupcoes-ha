@@ -21,14 +21,15 @@ from homeassistant.helpers.update_coordinator import (
 import voluptuous as vol
 
 from .const import (
+    DOMAIN,
+    DEFAULT_NAME,
+    DEFAULT_URL,
+    DEFAULT_RADIUS,
+    USER_AGENT,
+    CONF_SOURCE,
     CONF_NAME,
     CONF_SCAN_INTERVAL,
-    CONF_SOURCE,
-    DEFAULT_NAME,
-    DEFAULT_SCAN_INTERVAL,
-    DEFAULT_URL,
-    DOMAIN,
-    USER_AGENT,
+    CONF_RADIUS,
 )
 from .parser import extract_locations_full_from_html
 
